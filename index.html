@@ -1,0 +1,469 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jan Dranreb Balangue | Full Stack Software Developer</title>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&family=Newsreader:opsz,wght@6..72,500&display=swap");
+
+      :root {
+        --bg: #f2f5f9;
+        --surface: #ffffff;
+        --surface-soft: #f8fbff;
+        --text: #12202f;
+        --muted: #506274;
+        --border: #d8e1ea;
+        --accent: #1f5f95;
+        --accent-soft: #eaf3fb;
+        --shadow: 0 18px 36px rgba(15, 32, 50, 0.08);
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      html,
+      body {
+        margin: 0;
+      }
+
+      body {
+        font-family: "Manrope", "Avenir Next", "Segoe UI", sans-serif;
+        color: var(--text);
+        line-height: 1.6;
+        background:
+          radial-gradient(circle at 0 0, #e5eef9 0%, transparent 40%),
+          linear-gradient(180deg, #f8fbff 0%, var(--bg) 100%);
+      }
+
+      .container {
+        width: min(1060px, 92vw);
+        margin: 0 auto;
+        padding: 2.2rem 0 3.6rem;
+      }
+
+      .hero {
+        position: relative;
+        display: grid;
+        grid-template-columns: 1.3fr 0.8fr;
+        gap: 1.3rem;
+        padding: clamp(1.35rem, 2.8vw, 2.2rem);
+        border: 1px solid var(--border);
+        border-radius: 18px;
+        background: var(--surface);
+        box-shadow: var(--shadow);
+      }
+
+      .top-actions {
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
+      }
+
+      .mode-toggle {
+        border: 1px solid var(--border);
+        background: var(--surface-soft);
+        color: var(--text);
+        border-radius: 999px;
+        padding: 0.42rem 0.82rem;
+        font: inherit;
+        font-size: 0.82rem;
+        font-weight: 600;
+        cursor: pointer;
+      }
+
+      .kicker {
+        display: inline-block;
+        margin-bottom: 0.45rem;
+        font-size: 0.76rem;
+        font-weight: 700;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        color: var(--muted);
+      }
+
+      h1 {
+        margin: 0;
+        font-size: clamp(1.95rem, 5vw, 3rem);
+        line-height: 1.08;
+      }
+
+      .title {
+        margin: 0.38rem 0 0.9rem;
+        font-family: "Newsreader", Georgia, serif;
+        font-size: clamp(1.15rem, 2.1vw, 1.45rem);
+        color: #1b344e;
+      }
+
+      .intro {
+        margin: 0;
+        max-width: 62ch;
+        color: #2f4457;
+      }
+
+      .contact {
+        margin-top: 1rem;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.55rem;
+      }
+
+      .contact a {
+        display: inline-flex;
+        align-items: center;
+        text-decoration: none;
+        color: #173047;
+        background: var(--surface-soft);
+        border: 1px solid var(--border);
+        border-radius: 999px;
+        padding: 0.45rem 0.76rem;
+        font-size: 0.9rem;
+        font-weight: 600;
+      }
+
+      .contact .download {
+        color: #ffffff;
+        background: var(--accent);
+        border-color: #1a5484;
+      }
+
+      .snapshot {
+        border: 1px solid var(--border);
+        border-radius: 14px;
+        padding: 1rem;
+        background: var(--surface-soft);
+      }
+
+      .snapshot h2 {
+        margin: 0 0 0.75rem;
+        font-size: 0.82rem;
+        letter-spacing: 0.09em;
+        text-transform: uppercase;
+        color: var(--muted);
+      }
+
+      .metric {
+        margin: 0;
+        padding: 0.7rem 0;
+        border-top: 1px solid var(--border);
+      }
+
+      .metric:first-of-type {
+        border-top: 0;
+        padding-top: 0;
+      }
+
+      .metric strong {
+        display: block;
+        font-size: 1.35rem;
+        line-height: 1.1;
+      }
+
+      .metric span {
+        font-size: 0.84rem;
+        color: var(--muted);
+      }
+
+      section {
+        margin-top: 1rem;
+        border: 1px solid var(--border);
+        border-radius: 16px;
+        background: var(--surface);
+        padding: clamp(1rem, 2vw, 1.35rem);
+      }
+
+      section h2 {
+        margin: 0 0 0.85rem;
+        font-size: 0.9rem;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        color: var(--muted);
+      }
+
+      .skills {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.5rem;
+      }
+
+      .skill {
+        font-size: 0.84rem;
+        border: 1px solid var(--border);
+        border-radius: 999px;
+        padding: 0.3rem 0.62rem;
+        background: var(--surface-soft);
+      }
+
+      .timeline {
+        display: grid;
+        gap: 1rem;
+      }
+
+      .item {
+        padding-left: 0.9rem;
+        border-left: 3px solid #c7d8e9;
+      }
+
+      .item h3 {
+        margin: 0;
+        font-size: 1.03rem;
+      }
+
+      .meta {
+        margin: 0.18rem 0 0.45rem;
+        font-size: 0.86rem;
+        color: var(--muted);
+      }
+
+      ul {
+        margin: 0;
+        padding-left: 1.05rem;
+      }
+
+      li + li {
+        margin-top: 0.35rem;
+      }
+
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+        gap: 0.8rem;
+      }
+
+      .project {
+        border: 1px solid var(--border);
+        border-radius: 12px;
+        padding: 0.85rem;
+        background: var(--surface-soft);
+      }
+
+      .project h3 {
+        margin: 0 0 0.35rem;
+        font-size: 0.98rem;
+      }
+
+      .project p {
+        margin: 0;
+        color: #2f4457;
+      }
+
+      .education p {
+        margin: 0;
+      }
+
+      body.dark {
+        --bg: #0f1721;
+        --surface: #152131;
+        --surface-soft: #1a2a3d;
+        --text: #e9f0f8;
+        --muted: #9fb4c8;
+        --border: #2d4156;
+        --accent: #4f97d2;
+        --accent-soft: #18354f;
+        --shadow: 0 18px 36px rgba(0, 0, 0, 0.34);
+        background:
+          radial-gradient(circle at 0 0, #1e2f42 0%, transparent 40%),
+          linear-gradient(180deg, #0b121a 0%, var(--bg) 100%);
+      }
+
+      body.dark .title,
+      body.dark .intro,
+      body.dark .project p {
+        color: #cfdeeb;
+      }
+
+      body.dark .contact a {
+        color: #e6f0fa;
+        border-color: #3f5670;
+        background: #223448;
+      }
+
+      body.dark .contact .download {
+        color: #0f1a26;
+        background: #7cb7e2;
+        border-color: #7cb7e2;
+      }
+
+      body.dark .item {
+        border-left-color: #45607b;
+      }
+
+      @media (max-width: 880px) {
+        .hero {
+          grid-template-columns: 1fr;
+        }
+
+        .top-actions {
+          position: static;
+          margin-bottom: 0.65rem;
+        }
+      }
+
+      @media (max-width: 640px) {
+        .container {
+          padding-top: 1.1rem;
+        }
+
+        .hero,
+        section {
+          border-radius: 14px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main class="container">
+      <header class="hero">
+        <div>
+          <div class="top-actions">
+            <button class="mode-toggle" id="modeToggle" type="button">Dark mode</button>
+          </div>
+          <h1>Jan Dranreb R. Balangue</h1>
+          <p class="title">Full Stack Software Developer</p>
+          <p class="intro">
+            Full stack developer with hands-on experience delivering production systems from API
+            design to deployment. Strong background in backend development, workflow automation,
+            and CI/CD implementation for reliable and faster releases.
+          </p>
+          <div class="contact">
+            <a href="mailto:jandranrebbalangue@gmail.com">jandranrebbalangue@gmail.com</a>
+            <a
+              class="download"
+              href="./Jan-Dranreb-Balangue-Resume.pdf"
+              download
+              >Download CV</a
+            >
+          </div>
+        </div>
+
+        <aside class="snapshot">
+          <h2>Professional Snapshot</h2>
+          <p class="metric"><strong>5+ Years</strong><span>Full stack development experience</span></p>
+          <p class="metric"><strong>CI/CD Ownership</strong><span>Automated delivery pipelines in Bitbucket</span></p>
+          <p class="metric"><strong>Backend Focus</strong><span>REST APIs, automation jobs, and integrations</span></p>
+        </aside>
+      </header>
+
+      <section>
+        <h2>Core Skills</h2>
+        <div class="skills">
+          <span class="skill">JavaScript (ES6+)</span>
+          <span class="skill">TypeScript</span>
+          <span class="skill">React</span>
+          <span class="skill">Node.js</span>
+          <span class="skill">Fastify</span>
+          <span class="skill">Express</span>
+          <span class="skill">REST APIs</span>
+          <span class="skill">BullMQ</span>
+          <span class="skill">Cron Jobs</span>
+          <span class="skill">DevOps</span>
+          <span class="skill">Docker / Compose</span>
+          <span class="skill">CI/CD</span>
+          <span class="skill">MongoDB</span>
+          <span class="skill">PostgreSQL</span>
+          <span class="skill">Supabase</span>
+          <span class="skill">Git / GitHub / Bitbucket</span>
+          <span class="skill">Linux</span>
+        </div>
+      </section>
+
+      <section>
+        <h2>Experience</h2>
+        <div class="timeline">
+          <article class="item">
+            <h3>Allied Marketing - Full Stack Developer</h3>
+            <p class="meta">March 2023 - Present</p>
+            <ul>
+              <li>Led end-to-end implementation and deployment of internal and client-facing projects.</li>
+              <li>Managed server installation, configuration, and rollout to support stable operations.</li>
+              <li>Built responsive email templates with broad compatibility across clients and devices.</li>
+              <li>Delivered in-house automation tools that reduced manual work and improved team output.</li>
+              <li>Designed and maintained Bitbucket CI/CD pipelines for faster and safer releases.</li>
+            </ul>
+          </article>
+
+          <article class="item">
+            <h3>Digiteer - Software Developer</h3>
+            <p class="meta">September 2021 - December 2022</p>
+            <ul>
+              <li>Developed and maintained full stack applications in collaboration with the CTO.</li>
+              <li>Handled AWS monitoring and cloud service maintenance for application reliability.</li>
+            </ul>
+          </article>
+
+          <article class="item">
+            <h3>Splasheo - Software Developer</h3>
+            <p class="meta">March 2021 - August 2021</p>
+            <ul>
+              <li>Developed secure and optimized REST APIs for automated video-thumbnail generation.</li>
+              <li>Integrated APIs to support streamlined publishing across social media channels.</li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
+      <section>
+        <h2>Selected Projects</h2>
+        <div class="grid">
+          <article class="project">
+            <h3>Email Warm-Up Automation</h3>
+            <p>
+              Developed a UI and API-based platform replacing manual scripts, with scheduling and
+              recipient control to strengthen sender reputation.
+            </p>
+          </article>
+
+          <article class="project">
+            <h3>Point of Sale System</h3>
+            <p>Implemented maintenance and feature improvements while supporting AWS operations.</p>
+          </article>
+
+          <article class="project">
+            <h3>Brother's Keeper</h3>
+            <p>
+              Supported ongoing improvements for a membership management and monitoring system.
+            </p>
+          </article>
+
+          <article class="project">
+            <h3>Santi E-Learning Platform</h3>
+            <p>Delivered continuous enhancements and maintenance on an online learning platform.</p>
+          </article>
+
+          <article class="project">
+            <h3>Splasheo Media Platform</h3>
+            <p>
+              Built API services for thumbnail generation and integrated social publishing workflows.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section class="education">
+        <h2>Education</h2>
+        <p><strong>Christ the King College</strong> - BS in Information Technology (2015 - 2020)</p>
+      </section>
+    </main>
+
+    <script>
+      const modeToggle = document.getElementById("modeToggle");
+      const savedTheme = localStorage.getItem("theme");
+      const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+
+      function applyTheme(theme) {
+        const dark = theme === "dark";
+        document.body.classList.toggle("dark", dark);
+        modeToggle.textContent = dark ? "Light mode" : "Dark mode";
+      }
+
+      applyTheme(savedTheme || (prefersDark ? "dark" : "light"));
+
+      modeToggle.addEventListener("click", () => {
+        const nextTheme = document.body.classList.contains("dark") ? "light" : "dark";
+        applyTheme(nextTheme);
+        localStorage.setItem("theme", nextTheme);
+      });
+    </script>
+  </body>
+</html>
