@@ -113,6 +113,63 @@
         <h2>Selected Projects</h2>
         <div class="grid">
           <article class="project">
+            <h3>Internal Business CRM</h3>
+            <p class="project-type">Private / Internal Production System</p>
+            <p>
+              I maintain and improve an existing production CRM supporting day-to-day
+              business operations, focusing on database infrastructure, CI/CD, deployment
+              reliability, and production maintenance.
+            </p>
+            <p class="project-status"><strong>Private Internal System</strong></p>
+            <p class="project-confidentiality">
+              This is a private internal company system. Source code and live access
+              cannot be shared publicly.
+            </p>
+            <details class="project-details">
+              <summary>Production contributions</summary>
+              <h4>My Role</h4>
+              <p>
+                I contribute to the ongoing maintenance and improvement of an application
+                that was already in production; I did not build the CRM from scratch.
+              </p>
+              <h4>Challenge</h4>
+              <p>
+                As the CRM grew, application builds on the production server became slow,
+                unreliable, and resource-intensive.
+              </p>
+              <h4>Solution</h4>
+              <p>
+                I moved builds to GitHub Actions, where CI builds Docker images and
+                publishes them to GitHub Container Registry (GHCR). Production now pulls
+                pre-built images for deployment. Selective frontend/API builds and parallel
+                processing avoid unnecessary work and improve release reliability.
+              </p>
+              <h4>Key Contributions</h4>
+              <ul>
+                <li>Migrated the production PostgreSQL database.</li>
+                <li>Fixed and improved the existing CI/CD pipeline.</li>
+                <li>Maintained production deployments and troubleshot production and deployment issues.</li>
+                <li>Moved Docker builds from the production server to CI, publishing images to GHCR.</li>
+                <li>Optimized the workflow with selective frontend/API builds and parallel processing.</li>
+              </ul>
+              <h4>Result</h4>
+              <p>
+                A faster, more reliable, and more maintainable deployment process, with
+                less build workload on the production server.
+              </p>
+              <h4>Technologies</h4>
+              <div class="skills">
+                <span class="skill">Next.js</span>
+                <span class="skill">PostgreSQL</span>
+                <span class="skill">GitHub Actions</span>
+                <span class="skill">Docker</span>
+                <span class="skill">GHCR</span>
+                <span class="skill">Linux</span>
+              </div>
+            </details>
+          </article>
+
+          <article class="project">
             <h3>Email Warm-Up Automation</h3>
             <p>
               Developed a UI and API-based platform replacing manual scripts, with scheduling and

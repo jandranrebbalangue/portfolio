@@ -262,6 +262,43 @@ li + li {
   color: #2f4457;
 }
 
+.project .project-type {
+  margin-bottom: 0.55rem;
+  font-size: 0.86rem;
+}
+
+.project .project-status {
+  margin-top: 0.75rem;
+  font-size: 0.84rem;
+}
+
+.project .project-confidentiality {
+  margin-top: 0.35rem;
+  font-size: 0.84rem;
+}
+
+.project-details {
+  margin-top: 0.85rem;
+  border-top: 1px solid var(--border);
+  padding-top: 0.65rem;
+  font-size: 0.9rem;
+}
+
+.project-details summary {
+  cursor: pointer;
+  font-weight: 700;
+}
+
+.project-details summary:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+}
+
+.project-details h4 {
+  margin: 0.85rem 0 0.35rem;
+  font-size: 0.9rem;
+}
+
 .education p {
   margin: 0;
 }
